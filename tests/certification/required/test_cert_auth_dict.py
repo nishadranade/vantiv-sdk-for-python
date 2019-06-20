@@ -33,12 +33,15 @@ sys.path.insert(0, package_root)
 
 package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
-
-import certification_test_conf
-
-conf = certification_test_conf.conf
-
 from vantivsdk import *
+# import certification_test_conf
+
+conf = utils.Configuration()
+
+# certification testing should go to prelive
+conf.url = 'https://payments.vantivprelive.com/vap/communicator/online'
+conf.proxy = ''
+
 
 
 class TestCertAuthsDict(unittest.TestCase):
