@@ -37,11 +37,18 @@ from vantivsdk import *
 # import certification_test_conf
 
 conf = utils.Configuration()
+print("printing proxy settings")
 
+print(conf.proxy)
+print(conf.url)
+
+print("printing proxy settings")
 # certification testing should go to prelive
 conf.url = 'https://payments.vantivprelive.com/vap/communicator/online'
 conf.proxy = ''
+print(conf.url)
 
+print(conf.proxy)
 
 
 class TestCertAuthsDict(unittest.TestCase):
