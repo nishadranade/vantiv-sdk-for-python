@@ -33,14 +33,10 @@ from vantivsdk import *
 package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
-#import certification_test_conf
+import certification_test_conf
 
-#conf = certification_test_conf.conf
-conf = utils.Configuration()
+conf = certification_test_conf.conf
 
-# certification testing should go to prelive
-conf.url = 'https://payments.vantivprelive.com/vap/communicator/online'
-# conf.proxy = ''
 
 print('Testing agaisnt: ' + conf.url)
 class TestCertEcheckDict(unittest.TestCase):
