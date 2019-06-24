@@ -33,3 +33,4 @@ conf = utils.Configuration()
 
 # certification testing should go to prelive
 conf.url = 'https://payments.vantivprelive.com/vap/communicator/online'
+conf.proxy = ""
